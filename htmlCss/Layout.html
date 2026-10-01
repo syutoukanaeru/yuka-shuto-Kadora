@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flexboxレイアウト</title>
+
+    <style>
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px;
+      }
+
+      main {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 24px;
+      }
+
+      .card {
+        flex: 1 1 250px;
+        border: 1px solid #ccc;
+        padding: 16px;
+        transition: box-shadow 0.2s ease;
+      }
+
+      .card:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div>ロゴ</div>
+
+      <nav>
+        <a href="#">メニュー</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="card">カード1</div>
+      <div class="card">カード2</div>
+      <div class="card">カード3</div>
+    </main>
+  </body>
+</html>
