@@ -1,0 +1,8 @@
+Tool versions
+
+node: v24.19.0
+npm: 11.17.0
+git: 2.54.0.windows.1
+nomd: command not found
+
+Checked: 2026-10-01
