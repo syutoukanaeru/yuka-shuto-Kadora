@@ -3,6 +3,7 @@ Tool versions
 node: v24.19.0
 npm: 11.17.0
 git: 2.54.0.windows.1
-nomd: command not found
+Java(TM) SE Runtime Environment (build 21.0.10+8-LTS-217)
+Java HotSpot(TM) 64-Bit Server VM (build 21.0.10+8-LTS-217, mixed mode, sharing)
 
 Checked: 2026-10-01
