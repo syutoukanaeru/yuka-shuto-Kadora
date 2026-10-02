@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSSバリアブル</title>
+    <style>
+      :root {
+        --main-color: #e91e63;
+        --bg-dark: #222222;
+      }
+      body.dark {
+        --main-color: #8bc34a;
+      }
+      .btn {
+        background-color: var(--main-color);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Variables Example</h1>
+  </body>
+</html>
