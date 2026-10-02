@@ -72,6 +72,7 @@
         font-family: var(--button-font-family);
         cursor: pointer;
         text-decoration: none;
+        transition: background-color 0.3s ease;
       }
       .btn:hover {
         background-color: var(--primary-hover-color);
@@ -91,15 +92,6 @@
           justify-content: space-between;
         }
         .feature-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-      @media (min-width: 1024px) {
-        .header {
-          flex-direction: row;
-          justify-content: space-between;
-        }
-        .feature-grid {
           grid-template-columns: repeat(3, 1fr);
         }
       }
@@ -107,19 +99,20 @@
   </head>
   <body>
     <header class="header">
-      <div class="header-logo">Graduation</div>
+      <div class="header-logo">ロゴ</div>
+      <nav class="nav">
+        <a href="#">ホーム</a>
+        <a href="#">サービス</a>
+        <a href="#">お問い合わせ</a>
+      </nav>
     </header>
-    <nav class="nav">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </nav>
     <main class="main">
       <div class="feature-grid">
-        <div class="feature">Feature 1</div>
-        <div class="feature">Feature 2</div>
-        <div class="feature">Feature 3</div>
+        <div class="feature">特徴1</div>
+        <div class="feature">特徴2</div>
+        <div class="feature">特徴3</div>
       </div>
     </main>
+    <button class="btn" type="button">戻る</button>
   </body>
 </html>
