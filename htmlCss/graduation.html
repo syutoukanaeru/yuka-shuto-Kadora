@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>製品紹介</title>
+    <style>
+      :root {
+        --primary-color: #3498db;
+        --primary-hover-color: #2980b9;
+        --secondary-color: #2ecc71;
+        --secondary-hover-color: #27ae60;
+        --text-color: #333333;
+        --background-color: #ffffff;
+        --border-radius: 4px;
+        --font-family: "Arial", sans-serif;
+        --heading-font-family: "Helvetica", sans-serif;
+        --button-font-family: "Verdana", sans-serif;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: var(--background-color);
+        color: var(--text-color);
+        font-family: var(--font-family);
+        line-height: 1.6;
+      }
+      .body {
+        background-color: var(--background-color);
+      }
+      .header {
+        background-color: var(--primary-color);
+        color: var(--background-color);
+        padding: 1rem;
+        text-align: center;
+        font-family: var(--heading-font-family);
+      }
+      .header-logo {
+        font-family: var(--heading-font-family);
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+      .nav {
+        background-color: var(--secondary-color);
+        color: var(--background-color);
+        padding: 0.5rem;
+        text-align: center;
+        font-family: var(--button-font-family);
+      }
+      .nav a {
+        color: var(--background-color);
+      }
+      .nav a:hover {
+        color: var(--secondary-hover-color);
+      }
+      .main {
+        padding: 2rem;
+        font-family: var(--font-family);
+      }
+      .btn {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background-color: var(--primary-color);
+        color: var(--background-color);
+        border: none;
+        border-radius: var(--border-radius);
+        font-family: var(--button-font-family);
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .btn:hover {
+        background-color: var(--primary-hover-color);
+      }
+      .btn:focus-visible {
+        outline: 2px solid var(--primary-hover-color);
+        outline-offset: 2px;
+      }
+      .feature-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      @media (min-width: 768px) {
+        .header {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        .feature-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (min-width: 1024px) {
+        .header {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        .feature-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-logo">Graduation</div>
+    </header>
+    <nav class="nav">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+    <main class="main">
+      <div class="feature-grid">
+        <div class="feature">Feature 1</div>
+        <div class="feature">Feature 2</div>
+        <div class="feature">Feature 3</div>
+      </div>
+    </main>
+  </body>
+</html>
