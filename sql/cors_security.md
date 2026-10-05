@@ -12,7 +12,7 @@
 
 ブラウザには、ユーザーを悪意のあるスクリプトから保護するため「異なるオリジン（スキーム、ドメイン、ポートの組み合わせ）間で、JavaScriptによるリソースの読み取りを制限する」という **同一オリジンポリシー** が組み込まれている。
 
-### ②CROSエラーのメカニズム。
+### ②CORSエラーのメカニズム。
 
 フロントエンドとバックエンドのオリジンが異なる状態で通信を行う際、バックエンド側が適切なCORS許可ヘッダーを返却しないと、ブラウザは安全のためにレスポンスデータの読み取りを遮断し、CORSエラー（Cross-Origin Read Blocking 等）を発生させます。
 
@@ -28,7 +28,7 @@ Webサーバー（バックエンド）が特定オリジン `https://guild-offi
    - 概要: 許可するHTTPリクエストメソッドを絞り込んで指定する。
 
 ```http
-Access-Control-Allow-Origin: [https://guild-office.com](https://guild-office.com)
+Access-Control-Allow-Origin: https://guild-office.com
 Access-Control-Allow-Methods: GET, POST
 ```
 
