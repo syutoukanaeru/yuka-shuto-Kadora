@@ -11,9 +11,21 @@
     <maven.compiler.release>21</maven.compiler.release>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <jjwt.version>0.12.6</jjwt.version>
+    <spring-security.version>6.4.4</spring-security.version>
+    <jackson.version>2.18.3</jackson.version>
   </properties>
 
   <dependencies>
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-crypto</artifactId>
+      <version>${spring-security.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>${jackson.version}</version>
+    </dependency>
     <dependency>
       <groupId>io.jsonwebtoken</groupId>
       <artifactId>jjwt-api</artifactId>
@@ -44,6 +56,7 @@
           <release>21</release>
           <includes>
             <include>oauth_rate_limiter.java</include>
+            <include>graduation_secure_api.java</include>
           </includes>
         </configuration>
       </plugin>

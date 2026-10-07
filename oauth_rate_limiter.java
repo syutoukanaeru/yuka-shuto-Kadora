@@ -11,13 +11,13 @@ public class oauth_rate_limiter {
 
     // 1. JWT (HS256) の検証（要件 1）
     static Claims verifyJwt(String token) {
-        return Jwts.parserBuilder()
-                .setSigningKey(Keys.hmacShaKeyFor(SECRET))
+        return Jwts.parser()
+                .verifyWith(Keys.hmacShaKeyFor(SECRET))
                 .requireIssuer("https://auth.example.com")
                 .requireAudience("my-api-service")
                 .build()
-                .parseClaimsJws(token) // 期限切れ(exp)は ExpiredJwtException が投げられる
-                .getBody();
+                .parseSignedClaims(token) // 期限切れ(exp)は ExpiredJwtException が投げられる
+                .getPayload();
     }
 
     // 2. Sliding Window レートリミッター（要件 2）
