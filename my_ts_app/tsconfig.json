@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    // ===== 出力設定 =====
+    "target": "ES2022", // 出力するJSのバージョン（ES2022で最新機能OK）
+    "module": "commonjs", // モジュールシステム（Node.jsはcommonjs）
+    "outDir": "./dist", // コンパイル後のJSファイル出力先
+    "rootDir": "./src", // ソースコードのルートフォルダ
+
+    // ===== 厳密チェック（超重要！） =====
+    "strict": true, // 全ての厳密チェックを有効化（推奨）
+    "noImplicitAny": true, // 暗黙の any 型を禁止
+    "strictNullChecks": true, // null/undefined の厳密チェック
+    "noUnusedLocals": true, // 未使用の変数を警告
+    "noUnusedParameters": true, // 未使用の引数を警告
+
+    // ===== モジュール解決 =====
+    "esModuleInterop": true, // CommonJS/ESModule の相互運用を許可
+    "resolveJsonModule": true, // JSONファイルのimportを許可
+    "skipLibCheck": true, // ライブラリ型定義のチェックをスキップ（高速化）
+
+    // ===== 開発体験 =====
+    "sourceMap": true, // デバッグ用のソースマップを生成
+    "declaration": true, // 型定義ファイル(.d.ts)を生成
+    "forceConsistentCasingInFileNames": true // ファイル名の大文字小文字を厳密に
+  },
+  "include": ["src/**/*"], // コンパイル対象フォルダ
+  "exclude": ["node_modules", "dist"] // 除外フォルダ
+}
