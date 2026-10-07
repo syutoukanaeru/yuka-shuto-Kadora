@@ -1,20 +1,16 @@
-// src/index.ts
+//String型の変数
+const username: string = "ミリー";
 
-type Profile = {
-  name: string;
-  language: string;
-  level: number;
-};
+//Number型の変数
+const userAge: number = 25;
 
-function introduce(profile: Profile): string {
-  return `私は${profile.name}です。${profile.language}レベル${profile.level}です！`;
-}
+//Boolean型の変数
+const idLogin: boolean = true;
 
-const myProfile: Profile = {
-  name: "アルス",
-  language: "TypeScript",
-  level: 1,
-};
+//配列の変数
+const score: number[] = [90, 85, 100];
 
-const greeting: string = introduce(myProfile);
-console.log(greeting);
+console.log("名前", username);
+console.log("年齢", userAge);
+console.log("ログイン状態", idLogin);
+console.log("スコア", score);
