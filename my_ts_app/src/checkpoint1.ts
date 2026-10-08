@@ -8,7 +8,7 @@ interface ApiResponse<T> {
   data: T;
   timestamp: number;
 }
-const userResponce: ApiResponse<User> = {
+const userResponse: ApiResponse<User> = {
   success: true,
   data: {
     id: 1,
@@ -23,5 +23,5 @@ const scoreResponse: ApiResponse<number[]> = {
   timestamp: Date.now(),
 };
 
-console.log(userResponce);
+console.log(userResponse);
 console.log(scoreResponse);
