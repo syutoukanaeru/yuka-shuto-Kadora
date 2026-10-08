@@ -1,24 +1,20 @@
 interface User {
-    id: number;
-    name: string;
-    role: "admin" | "editor" | "viewer";
-    email?: string; // 任意のメールアドレス
+  name: string;
+  age: number;
+  role: "admin" | "editor" | "viewer";
+  email?: string; // 任意のメールアドレス
 }
-    const admin: User = {
-        id: 1,
-        name: "Admin User",
-        role: "admin",
-        email: "admin@example.com"
-    };
+const admin: User = {
+  name: "Admin User",
+  age: 30,
+  role: "admin",
+};
 
-    const editor: User = {
-        id: 2,
-        name: "Editor User",
-        role: "editor",
-        email: "editor@example.com"
-    };
-S
+const editor: User = {
+  name: "Editor User",
+  age: 25,
+  role: "editor",
+};
+
 console.log(admin);
 console.log(editor);
-
-
