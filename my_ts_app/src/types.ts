@@ -2,7 +2,6 @@ interface User {
   name: string;
   age: number;
   role: "admin" | "editor" | "viewer";
-  email?: string; // 任意のメールアドレス
 }
 const admin: User = {
   name: "Admin User",
