@@ -17,11 +17,11 @@ const userResponse: ApiResponse<User> = {
   },
   timestamp: Date.now(),
 };
-const scoreResponse: ApiResponse<number[]> = {
+const scoresResponse: ApiResponse<number[]> = {
   success: true,
   data: [95, 87, 78],
   timestamp: Date.now(),
 };
 
 console.log(userResponse);
-console.log(scoreResponse);
+console.log(scoresResponse);
