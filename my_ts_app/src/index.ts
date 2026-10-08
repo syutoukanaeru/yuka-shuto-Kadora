@@ -4,6 +4,7 @@ const username: string = "ミリー";
 //Number型の変数：年齢
 const userAge: number = 25;
 
+
 //Boolean型の変数：ログイン状態
 const idLogin: boolean = true;
 
