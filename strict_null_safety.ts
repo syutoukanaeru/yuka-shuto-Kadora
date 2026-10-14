@@ -1,4 +1,4 @@
-interface APIUser {
+interface ApiUser {
   id: number;
   name?: string;
   email?: string;
@@ -9,7 +9,7 @@ interface APIUser {
   };
 }
 
-function formatUserInfo(user: APIUser | null | undefined): string {
+function formatUserInfo(user: ApiUser | null | undefined): string {
   if (!user) {
     return "ユーザー情報なし";
   }
