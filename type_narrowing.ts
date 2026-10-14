@@ -17,8 +17,8 @@ interface Triangle {
 
 type Shape = Circle | Rectangle | Triangle;
 
-function assertNever(value: never): number {
-  throw new Error(`未対応の図形: ${JSON.stringify(value)}\
+function assertNever(value: never): never {
+  throw new Error(`未対応の図形: \${JSON.stringify(value)}\
   `);
 }
 function getArea(shape: Shape): number {
