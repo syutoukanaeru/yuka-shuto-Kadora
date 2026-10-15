@@ -4,12 +4,12 @@
 
 カートに追加された商品1件の情報を表します。
 
-｜ プロパティ名 ｜ 型 | 必須 ｜ 説明 ｜
-｜ --- | --- | --- | --- |
-| id | number | Yes | カートアイテムの一意識別子 |
-| productName | string | Yes | 商品名 |
-| price | number | Yes | 商品の単価（税抜き） |
-| quantity | number | Yes | 購入数量 |
+| プロパティ名 | 型     | 必須 | 説明                       |
+| ------------ | ------ | ---- | -------------------------- |
+| id           | number | Yes  | カートアイテムの一意識別子 |
+| productName  | string | Yes  | 商品名                     |
+| price        | number | Yes  | 商品の単価（税抜き）       |
+| quantity     | number | Yes  | 購入数量                   |
 
 \`\`\`typescript
 interface CartItem{
