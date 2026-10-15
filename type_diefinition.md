@@ -11,14 +11,14 @@
 | price        | number | Yes  | 商品の単価（税抜き）       |
 | quantity     | number | Yes  | 購入数量                   |
 
-\`\`\`typescript
-interface CartItem{
-id: number;
-productName: string;
-price: number;
-quantity: number;
+```typescript
+interface CartItem {
+  id: number;
+  productName: string;
+  price: number;
+  quantity: number;
 }
-\`\`\`
+```
 
 ## 2. PaymentSummary インターフェース
 
@@ -26,17 +26,16 @@ quantity: number;
 
 | プロパティ名 | 型     | 必須 | 説明                           |
 | ------------ | ------ | ---- | ------------------------------ |
-| subtotal     | number | Yes  | 小計（税抜き合計金額           |
+| subtotal     | number | Yes  | 小計（税抜き合計金額）         |
 | tax          | number | Yes  | 消費税額                       |
 | total        | number | Yes  | 合計金額（税込み）             |
 | promoCode    | string | No   | 適用されたプロモーションコード |
 
-\`\`\`typescript
-interface PaymentSummary{
-subtotal: number;
-tax: number;
-total: number;
-promoCode?: string;
-
+```typescript
+interface PaymentSummary {
+  subtotal: number;
+  tax: number;
+  total: number;
+  promoCode?: string;
 }
-\`\`\`
+```
