@@ -20,7 +20,7 @@ interface User {
   readonly id: number;
   name: string;
   email: string;
-  role: "admin" | "user" | "guest";
+  role: "admin" | "member" | "viewer";
   isActive: boolean;
 }
 
