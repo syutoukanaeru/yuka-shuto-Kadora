@@ -16,13 +16,20 @@ interface Task {
   dueDate: string | null;
 }
 
+interface User {
+  readonly id: number;
+  name: string;
+  email: string;
+  role: "admin" | "user" | "guest";
+  isActive: boolean;
+}
+
 interface ApiError {
   code: number;
   message: string;
   timestamp: string;
 }
 
-//Result型
 // Result型
 interface Success<T> {
   readonly ok: true;
@@ -32,6 +39,8 @@ interface Failure<E> {
   readonly ok: false;
   readonly error: E;
 }
+type Result<T, E> = Success<T> | Failure<E>;
+
 function success<T>(data: T): Success<T> {
   return { ok: true, data };
 }
@@ -40,7 +49,7 @@ function failure<E>(error: E): Failure<E> {
 }
 
 //ジェネリクス非同期フェッチ
-async function fetchApi<T>(
+async function fetchData<T>(
   url: string,
 ): Promise<Success<T> | Failure<ApiError>> {
   try {
@@ -93,7 +102,7 @@ function isHighPriority(task: Task): task is HighPriorityTask {
   return task.priority === "high" || task.priority === "critical";
 }
 //集計関数
-function aggregateTaskStats(tasks: Task[]): TaskStats {
+function calculateStats(tasks: Task[]): TaskStats {
   const byStatus: Record<TaskStatus, number> = {
     todo: 0,
     in_progress: 0,
@@ -162,9 +171,9 @@ const sampleTasks: Task[] = [
   {
     id: 3,
     title: "Task 3",
-    status: "in_progress",
+    status: "todo",
     description: "テスト",
-    priority: "high",
+    priority: "medium",
     assigneeId: 3,
     tags: ["テスト"],
     createdAt: "2024-08-01",
@@ -173,7 +182,7 @@ const sampleTasks: Task[] = [
   },
 ];
 
-const stats = aggregateTaskStats(sampleTasks);
+const stats = calculateStats(sampleTasks);
 console.log("統計", stats);
-console.log("期限切れタスク数", stats.overdueCount);
-console.log("高優先度タスク数", sampleTasks.filter(isHighPriority).length);
+console.log("期限切れ", stats.overdueCount);
+console.log("高優先度", sampleTasks.filter(isHighPriority).length);
