@@ -12,7 +12,7 @@ export function Counter() {
 
   // カウントが変わるたびにタイトルを更新
   useEffect(() => {
-    document.title = `残り：${count}回`;
+    document.title = `残り:${count}回`;
   }, [count]);
 
   // カウントが0になったらボタンを非活性にする
