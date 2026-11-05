@@ -32,3 +32,23 @@ function Detail() {
   );
 }
 
+export default function AppRouter() {
+  return (
+    <BrowserRouter>
+      {/* 要件3: ナビゲーション用 <Link> タグ */}
+      <nav style={{ marginBottom: "1rem" }}>
+        <Link to="/" style={{ marginRight: "1rem" }}>
+          Homeへ
+        </Link>
+        <Link to="/items/42">Item 42へ</Link>
+      </nav>
+
+      {/* 要件2: BrowserRouter, Routes, Route によるルーティング定義 */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/items/:id" element={<Detail />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
